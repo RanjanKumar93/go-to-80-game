@@ -153,14 +153,14 @@ function App() {
         />
       </div>
       <div className="mt-[20rem]">
-         <h1>Instructions</h1>
+        <h1>Instructions</h1>
         <ol>
-            <li>Site is Not Responsive yet, so please play on PC.</li>
-            <li>Press start to play.</li>
-            <li>First player 1 will roll the dice. The value written below the score is your current score; it will be added automatically while rolling.</li>
-            <li>Press "Set" to add the current score to the total score.</li>
-            <li>If a 1 comes up before you pressed "Set", you will lose your current score and won't be able to add it to the total score. You'll have to wait for your next turn.</li>
-            <li>The first player to reach a score of 80 will win.</li>
+            <li>1.Site is Not Responsive yet, so please play on PC.</li>
+            <li>2.Press start to play.</li>
+            <li>3.First player 1 will roll the dice. The value written below the score is your current score; it will be added automatically while rolling.</li>
+            <li>4.Press "Set" to add the current score to the total score.</li>
+            <li>5.If a 1 comes up before you pressed "Set", you will lose your current score and won't be able to add it to the total score. You'll have to wait for your next turn.</li>
+            <li>6.The first player to reach a score of 80 will win.</li>
         </ol>
 {/*         <pre>{`
       Instructions:
