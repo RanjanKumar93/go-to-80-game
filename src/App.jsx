@@ -2,6 +2,12 @@ import Player from "./components/Player";
 import { useState } from "react";
 
 import dice6 from "./assets/dice/dice-6.png"
+import dice1 from "./assets/dice/dice-1.png"
+import dice2 from "./assets/dice/dice-2.png"
+import dice3 from "./assets/dice/dice-3.png"
+import dice4 from "./assets/dice/dice-4.png"
+import dice5 from "./assets/dice/dice-5.png"
+
 
 function App() {
   const [dice, setDice] = useState(6);
@@ -106,7 +112,21 @@ function App() {
         <div className="fixed left-0 top-1/2 flex flex-col space-y-4 items-center justify-center w-full">
           {diceVisible && (
             <img
-              src={dice6}
+              src={()=> {
+                if(dice === 1){
+                return dice1
+                }else if(dice === 2){
+                  return dice2
+                }else if(dice === 3){
+                  return dice3
+                }else if(dice === 4){
+                  return dice4
+                }else if(dice === 5){
+                  return dice5
+                }else if(dice === 6){
+                  return dice6
+                }
+              }}</img>}
               alt={`dice-${dice}`}
               className="h-24 w-24"
             />
