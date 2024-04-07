@@ -105,7 +105,7 @@ function App() {
           {diceVisible && (
             <img
               src={`/src/assets/dice/dice-${dice}.png`}
-              alt={`dice-${dice}`}
+              alt={`dice`}
               className="h-24 w-24"
             />
           )}
