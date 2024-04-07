@@ -1,6 +1,8 @@
 import Player from "./components/Player";
 import { useState } from "react";
 
+import dice6 from "./assets/dice/dice-6.png"
+
 function App() {
   const [dice, setDice] = useState(6);
   const [diceVisible, setDiceVisible] = useState(false);
@@ -104,7 +106,7 @@ function App() {
         <div className="fixed left-0 top-1/2 flex flex-col space-y-4 items-center justify-center w-full">
           {diceVisible && (
             <img
-              src={`/src/assets/dice/dice-${dice}.png`}
+              src={dice6}
               alt={`dice-${dice}`}
               className="h-24 w-24"
             />
