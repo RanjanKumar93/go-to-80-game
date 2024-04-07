@@ -85,6 +85,22 @@ function App() {
     });
   };
 
+  const diceImage = (value) => {
+    if (value === 1) {
+      return dice1;
+    } else if (value === 2) {
+      return dice2;
+    } else if (value === 3) {
+      return dice3;
+    } else if (value === 4) {
+      return dice4;
+    } else if (value === 5) {
+      return dice5;
+    } else if (value === 6) {
+      return dice6;
+    }
+  };
+
   return (
     <>
       <div className="w-5/6 bg-pink-500 grid grid-cols-2 text-center laui mx-auto">
@@ -111,21 +127,7 @@ function App() {
         <div className="fixed left-0 top-1/2 flex flex-col space-y-4 items-center justify-center w-full">
           {diceVisible && (
             <img
-              src={() => {
-                if (dice === 1) {
-                  return dice1;
-                } else if (dice === 2) {
-                  return dice2;
-                } else if (dice === 3) {
-                  return dice3;
-                } else if (dice === 4) {
-                  return dice4;
-                } else if (dice === 5) {
-                  return dice5;
-                } else if (dice === 6) {
-                  return dice6;
-                }
-              }}
+              src={diceImage(dice)}
               alt={`dice-${dice}`}
               className="h-24 w-24"
             />
