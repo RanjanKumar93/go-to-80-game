@@ -105,7 +105,7 @@ function App() {
           {diceVisible && (
             <img
               src={`/src/assets/dice/dice-${dice}.png`}
-              alt={`dice`}
+              alt={`dice-${dice}`}
               className="h-24 w-24"
             />
           )}
@@ -136,7 +136,7 @@ function App() {
       1.press start to play.
       2.first player 1 will roll dice, value written below score is your current score it will got add automatcally white rolling.
       3.press set to add current score to score value.
-      4.If zero comes before you pressed set, you will loose your current score and you can't be able to add current score and you have to wait for your next turn.
+      4.If 1 comes before you pressed set, you will loose your current score and you can't be able to add current score and you have to wait for your next turn.
       5.first to get score 80 will win
       `}</pre>
       </div>
