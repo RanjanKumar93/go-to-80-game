@@ -104,7 +104,7 @@ function App() {
         <div className="fixed left-0 top-1/2 flex flex-col space-y-4 items-center justify-center w-full">
           {diceVisible && (
             <img
-              src={`./src/assets/dice/dice-${dice}.png`}
+              src={`./assets/dice/dice-${dice}.png`}
               alt="dice"
               className="h-24 w-24"
             />
