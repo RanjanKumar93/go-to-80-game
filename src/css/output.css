@@ -566,14 +566,6 @@ video {
   top: 50%;
 }
 
-.top-24 {
-  top: 6rem;
-}
-
-.top-36 {
-  top: 9rem;
-}
-
 .top-44 {
   top: 11rem;
 }
@@ -583,24 +575,25 @@ video {
   margin-right: auto;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.mt-\[40rem\] {
-  margin-top: 40rem;
-}
-
-.mt-\[4rem\] {
-  margin-top: 4rem;
-}
-
-.mt-\[25rem\] {
-  margin-top: 25rem;
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mt-\[20rem\] {
   margin-top: 20rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .flex {
@@ -631,8 +624,20 @@ video {
   width: 100%;
 }
 
+.list-outside {
+  list-style-position: outside;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -651,16 +656,22 @@ video {
   justify-content: space-between;
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .rounded-lg {
@@ -681,9 +692,9 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
-.bg-green-400 {
+.bg-green-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .bg-pink-300 {
@@ -696,9 +707,17 @@ video {
   background-color: rgb(236 72 153 / var(--tw-bg-opacity));
 }
 
-.bg-green-500 {
+.bg-\[red\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[none\] {
+  background-color: none;
+}
+
+.bg-none {
+  background-image: none;
 }
 
 .px-1 {
@@ -706,9 +725,9 @@ video {
   padding-right: 0.25rem;
 }
 
-.px-44 {
-  padding-left: 11rem;
-  padding-right: 11rem;
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .py-0 {
@@ -726,13 +745,27 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl {
@@ -770,7 +803,80 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:text-\[blue\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 255 / var(--tw-text-opacity));
+@media (min-width: 640px) {
+  .sm\:fixed {
+    position: fixed;
+  }
+
+  .sm\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .sm\:mt-\[20rem\] {
+    margin-top: 20rem;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+
+  .sm\:bg-\[yellow\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 0 / var(--tw-bg-opacity));
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:bg-\[red\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:bg-\[green\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 128 0 / var(--tw-bg-opacity));
+  }
+
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:bg-pink-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(236 72 153 / var(--tw-bg-opacity));
+  }
+
+  .xl\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 }

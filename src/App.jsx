@@ -103,7 +103,7 @@ function App() {
 
   return (
     <>
-      <div className="w-5/6 bg-pink-500 grid grid-cols-2 text-center laui mx-auto">
+      <div className="w-5/6 bg-pink-500 grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 text-center laui mx-auto">
         {winner === "P1" && (
           <div className="fixed text-9xl w-full text-center left-0 top-44">
             {name.P1} Wins
@@ -124,7 +124,7 @@ function App() {
           isActive={turn === "P1" && diceVisible}
           score={scoreP1}
         />
-        <div className="fixed left-0 top-1/2 flex flex-col space-y-4 items-center justify-center w-full">
+        <div className="sm:fixed bg-pink-300 left-0 top-1/2 flex flex-col space-y-4 items-center justify-center w-full">
           {diceVisible && (
             <img
               src={diceImage(dice)}
@@ -152,25 +152,23 @@ function App() {
           currentScore={currentScoreP2}
         />
       </div>
-      <div className="mt-[20rem]">
-        <h1>Instructions</h1>
-        <ol>
-            <li>1.Site is Not Responsive yet, so please play on PC.</li>
-            <li>2.Press start to play.</li>
-            <li>3.First player 1 will roll the dice. The value written below the score is your current score; it will be added automatically while rolling.</li>
-            <li>4.Press "Set" to add the current score to the total score.</li>
-            <li>5.If a 1 comes up before you pressed "Set", you will lose your current score and won't be able to add it to the total score. You'll have to wait for your next turn.</li>
-            <li>6.The first player to reach a score of 80 will win.</li>
+      <div className="mt-4 sm:mt-[20rem]">
+        <h1 className="my-2 text-2xl">Instructions</h1>
+        <ol className="list-outside list-decimal pl-5">
+          <li>It is a 1 vs 1 game.</li>
+          <li>Press start to play.</li>
+          <li>
+            First player 1 will roll the dice. The value written below the score
+            is your current score; it will be added automatically while rolling.
+          </li>
+          <li>Press Set to add the current score to the total score.</li>
+          <li>
+            If a 1 comes up before you pressed Set, you will lose your current
+            score and won&apos;t be able to add it to the total score.
+            You&apos;ll have to wait for your next turn.
+          </li>
+          <li>The first player to reach a score of 80 will win.</li>
         </ol>
-{/*         <pre>{`
-      Instructions:
-      Site is Note Responsive yet, so please play in PC.
-      1.press start to play.
-      2.first player 1 will roll dice, value written below score is your current score it will got add automatcally white rolling.
-      3.press set to add current score to score value.
-      4.If 1 comes before you pressed set, you will loose your current score and you can't be able to add current score and you have to wait for your next turn.
-      5.first to get score 80 will win
-      `}</pre> */}
       </div>
     </>
   );

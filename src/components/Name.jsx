@@ -5,16 +5,15 @@ function Name({ name, isEditing, onNameChange, inputName }) {
     <div className="text-white">
       {isEditing ? (
         <input
-        name={inputName}
+          name={inputName}
           type="text"
           value={name}
           onChange={onNameChange}
-          className="outline-none px-1 py-0.5 text-black"
-          minLength={4}
+          className="outline-none px-1 text-lg py-0.5 rounded-lg text-black"
           maxLength={12}
         />
       ) : (
-        name
+        <p className="text-lg mb-1">{name}</p> 
       )}
     </div>
   );

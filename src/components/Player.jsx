@@ -21,7 +21,7 @@ function Player({
         isActive ? "bg-blue-500" : ""
       } ${winner ? "bg-green-500" : ""}`}
     >
-      <div className="flex items-center w-full justify-between px-44">
+      <div className="flex items-center space-y-2 md:space-y-0 flex-col md:flex-row w-full justify-between px-7 lg:px-20 xl:px-32">
         <Name
           inputName={inputName}
           name={name}
@@ -37,12 +37,12 @@ function Player({
         </button>
       </div>
       <div className="mt-4 flex flex-col space-y-3 items-center">
-        <div>Score: {score}</div>
-        <div>{currentScore}</div>
+        <div className="sm:text-2xl">Score: {score}</div>
+        <div className="sm:text-xl">{currentScore}</div>
         <button
           onClick={setScore}
           disabled={winner}
-          className="border-[1px] border-black px-1 py-0.5 rounded-lg hover:bg-black"
+          className="border-[1px] border-black px-1 text-xl rounded-lg hover:bg-black"
         >
           set
         </button>
